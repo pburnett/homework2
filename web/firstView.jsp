@@ -1,23 +1,21 @@
+<%-- 
+    Document   : firstView
+    Created on : Oct 24, 2016, 7:13:05 PM
+    Author     : Dylan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="styles/main.css" rel="stylesheet" type="text/css"/>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>Main Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/main.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>First Page</title>
   </head>
   <body>
-    <header>
-      
-    </header>
     <main>
       <h1>Future Value Calculator</h1>
-      <form action="calculateInfo" method="post">
+      <form action="interest" method="post">
         <input type="hidden" name="action" value="add">        
         <label class="pad_top">Investment Amount</label>
         <input type="number" name="investmentAmount" required><br>
@@ -25,10 +23,7 @@ and open the template in the editor.
         <input type="number" name="yearlyInvestmentRate" required><br>
         <label class="pad_top">Number of Years</label>
         <input type="number" name="numberOfYears" required><br>
-    </form>
+      </form>
     </main>
-    <footer>
-      &copy;2016, Peter Dylan Burnett
-    </footer>
   </body>
 </html>
