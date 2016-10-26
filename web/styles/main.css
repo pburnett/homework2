@@ -9,8 +9,14 @@ and open the template in the editor.
 */
 
 @media only screen and (min-width: 400px) {
-  h1 {
-    color: blue;
+
+  html {
+    display: table;
+    margin: auto;
+  }
+
+  body {
+    width: 800px;
   }
 
   main {
@@ -18,15 +24,21 @@ and open the template in the editor.
     border-style: solid;
   }
 
-  footer {
-    border-color: blue;
-    border-style: solid;
+  h1 {
+    color: blue;
   }
+
 }
 
 @media only screen and (max-width: 400px) {
-  h1 {
-    color: blue;
+
+  html {
+    display: table;
+    margin: auto;
+  }
+
+  body {
+
   }
 
   main {
@@ -34,8 +46,8 @@ and open the template in the editor.
     border-style: solid;
   }
 
-  footer {
-    border-color: blue;
-    border-style: solid;
+  h1 {
+    color: blue;
   }
+
 }
