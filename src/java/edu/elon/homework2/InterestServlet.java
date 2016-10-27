@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.elon.homework2;
 
 import edu.elon.data.Data;
@@ -14,56 +9,53 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Dylan
+ * @author Dylan Burnett, Ryan Kugel
  */
 public class InterestServlet extends HttpServlet {
 
-  // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-  /**
-   * Handles the HTTP <code>GET</code> method.
-   *
-   * @param request servlet request
-   * @param response servlet response
-   * @throws ServletException if a servlet-specific error occurs
-   * @throws IOException if an I/O error occurs
-   */
-  @Override
-  protected void doGet(HttpServletRequest request, HttpServletResponse response)
-          throws ServletException, IOException {
-    doPost(request, response);
-  }
-
-  /**
-   * Handles the HTTP <code>POST</code> method.
-   *
-   * @param request servlet request
-   * @param response servlet response
-   * @throws ServletException if a servlet-specific error occurs
-   * @throws IOException if an I/O error occurs
-   */
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
     String action = request.getParameter("action");
     String url = "/firstView.jsp";
 
-    if (action == null) {
-      action = "join";  
-    }
-
-    if (action.equals("join")) {
-      url = "/firstView.jsp"; 
-    } else if (action.equals("add")) {
+    if(action.equals("add")) {
+      
+      //Gets parameters from request
+      double investmentAmount = Double.parseDouble(request.getParameter("investmentAmount"));
+      double yearlyInvestmentRate = Double.parseDouble(request.getParameter("yearlyInvestmentRate"));
+      double numberOfYears = Double.parseDouble(request.getParameter("numberOfYears"));
+      
+      //Stores parameters in Data object 
       Data data = new Data();
-      String investmentAmount = request.getParameter("investmentAmount");
-      String yearlyInvestmentRate = request.getParameter("yearlyInvestmentRate");
-      String numberOfYears = request.getParameter("numberOfYears");
+      data.setInvestmentAmount(investmentAmount);
+      data.setYearlyInvestmentRate(yearlyInvestmentRate);
+      data.setNumberOfYears(numberOfYears);
+      data.calculateFutureValue();
+      
+      //Store Data object in request
+      request.setAttribute("data", data);
+      
+      //Forwards request to JSP
       url = "/secondView.jsp";
+      getServletContext()
+              .getRequestDispatcher(url)
+              .forward(request, response);
+      
     }
-
-    getServletContext()
-            .getRequestDispatcher(url)
-            .forward(request, response);
+    //Forwards request back to firstView.jsp if action is not "interest"
+    else {
+      getServletContext()
+              .getRequestDispatcher(url)
+              .forward(request, response);
+    }
+    
+  }
+  
+  @Override
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+          throws ServletException, IOException {
+      doPost(request, response);
   }
 
-}
+} 

@@ -8,7 +8,7 @@
 
 <main>
   <h1>Future Value Calculator</h1>
-  <form action="interest" method="post">
+  <form action="calculate" method="post">
     <input type="hidden" name="action" value="add">        
     <label>Investment Amount</label>
     <input type="number" name="investmentAmount" required><br>
@@ -16,6 +16,7 @@
     <input type="number" name="yearlyInvestmentRate" required><br>
     <label>Number of Years</label>
     <input type="number" name="numberOfYears" required><br>
+    <input type="submit" value="Calculate">
   </form>
 </main>
 

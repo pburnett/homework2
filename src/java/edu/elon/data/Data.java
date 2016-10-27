@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.elon.data;
 
 import java.io.Serializable;
 
 /**
  *
- * @author Dylan
+ * @author Dylan Burnett, Ryan Kugel
  */
 public class Data implements Serializable{
   private double investmentAmount;
@@ -44,7 +39,7 @@ public class Data implements Serializable{
     return numberOfYears;
   }
   
-  public void setNumberOfYears(int numberOfYears) {
+  public void setNumberOfYears(double numberOfYears) {
     this.numberOfYears = numberOfYears;
   }
   
@@ -57,6 +52,7 @@ public class Data implements Serializable{
   }
   
   public void calculateFutureValue() {
-    futureValue = investmentAmount * (Math.pow(1 + yearlyInvestmentRate, numberOfYears));
+    futureValue = investmentAmount * (Math.pow(1 + (yearlyInvestmentRate / 100), numberOfYears));
+    futureValue = Math.round(futureValue * 100.0) / 100.0;
   }
 }
