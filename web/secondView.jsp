@@ -3,7 +3,7 @@
     Created on : Oct 24, 2016, 7:13:31 PM
     Author     : Dylan Burnett & Ryan Kugel
 --%>
-
+<%@page contentType="text/html" pageEncoding="utf-8"%>
 <%@ include file="/includes/header.html" %>
 
 <%@ page import="edu.elon.data.Data" %>
