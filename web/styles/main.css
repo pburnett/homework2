@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : Oct 16, 2016, 11:38:13 PM
-    Author     : Dylan
+    Author     : Dylan Burnett and Ryan Kugel
 */
 
 @media only screen and (min-width: 400px) {
@@ -15,7 +15,7 @@ and open the template in the editor.
     border-style: solid;
     display: table;
     margin: auto;
-    width: 800px;
+    width: 700px;
   }
 
   div {
@@ -51,7 +51,7 @@ and open the template in the editor.
 
   .labels {
     float: left;
-    margin-left: 20%;
+    margin-left: 28%;
   }
 
   .labels p {
@@ -60,7 +60,7 @@ and open the template in the editor.
   }
 
   .data {
-    margin-left: 40%;
+    margin-left: 50%;
   }
 
   .data p{
@@ -90,8 +90,12 @@ and open the template in the editor.
   body {
     border-color: blue;
     border-style: solid;
-    width: auto;
     height: auto;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
   }
 
   div {
@@ -108,10 +112,10 @@ and open the template in the editor.
 
   input {
     height: 3em;
-    width: 25em;
     margin-bottom: 1em;
     margin-top: 1em;
     margin-left: 0;
+    width: 25em;
   }
 
   form {

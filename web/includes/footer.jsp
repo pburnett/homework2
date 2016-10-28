@@ -1,3 +1,8 @@
+<%-- 
+    Document   : footer.jsp
+    Created on : Oct 24, 2016, 7:13:31 PM
+    Author     : Dylan Burnett & Ryan Kugel
+--%>
 <%@ page import="java.util.GregorianCalendar, java.util.Calendar" %>
 <%
   GregorianCalendar currentDate = new GregorianCalendar();
