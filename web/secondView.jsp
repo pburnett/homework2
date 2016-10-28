@@ -13,13 +13,21 @@
     data = new Data();
   }
 %>
-
-<main>
-  <h1>Future Value Calculator</h1>
-  <p>Investment Amount: $<%= data.getInvestmentAmount() %></p>
-  <p>Yearly Interest Rate: <%= data.getYearlyInvestmentRate() %></p>
-  <p>Number of Years: <%= data.getNumberOfYears() %></p>
-  <p>Future Value: $<%= data.getFutureValue() %></p>
-</main>
-
+<div>
+  <main>
+    <h1>Future Value Calculator</h1>
+    <aside class="labels">
+      <p>Investment Amount: </p><br>
+      <p>Yearly Interest Rate: </p><br>
+      <p>Number of Years: </p><br>
+      <p>Future Value: </p><br>
+    </aside>
+    <section class="data">
+      <p>$<%= data.getInvestmentAmount()%></p><br>
+      <p><%= data.getYearlyInvestmentRate()%></p><br>
+      <p><%= data.getNumberOfYears()%></p><br>
+      <p>$<%= data.getFutureValue()%></p><br>
+    </section>
+  </main>
+</div>
 <%@ include file="/includes/footer.jsp" %>

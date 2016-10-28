@@ -10,44 +10,156 @@ and open the template in the editor.
 
 @media only screen and (min-width: 400px) {
 
-  html {
+  body {
+    border-color: blue;
+    border-style: solid;
     display: table;
     margin: auto;
-  }
-
-  body {
     width: 800px;
   }
 
-  main {
-    border-color: blue;
+  div {
+    border-bottom-color: blue;
+    border-left-color: white;
+    border-right-color: white;
     border-style: solid;
+    border-top-color: white;
+  }
+
+  label {
+    margin-bottom: 0.5em;
+    width: 7em;
+  }
+
+  input {
+    height: 5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;    
+    width: 15em;
+  }
+
+  form {
+    margin-left: 7em;
+  }
+
+  .calculateButton {
+    height: 5em;
+    margin-bottom: 0.5em;
+    margin-left: 12.5em;    
+    width: 8em;
+  }
+
+  .labels {
+    float: left;
+    margin-left: 20%;
+  }
+
+  .labels p {
+    margin: 0;
+    text-align: right;
+  }
+
+  .data {
+    margin-left: 40%;
+  }
+
+  .data p{
+    margin: 0;
+  }
+
+  .error {
+    margin-left: 2em;
+  }
+
+  #copyright {
+    margin-left: 1em;
+  }
+
+  #numberOfYears {
+    margin-left: 1.1em;
   }
 
   h1 {
     color: blue;
+    margin-left: 1em;
   }
 
 }
 
 @media only screen and (max-width: 400px) {
-
-  html {
-    display: table;
-    margin: auto;
-  }
-
   body {
-
-  }
-
-  main {
     border-color: blue;
     border-style: solid;
+    width: auto;
+    height: auto;
+  }
+
+  div {
+    border-bottom-color: blue;
+    border-left-color: white;
+    border-right-color: white;
+    border-style: solid;
+    border-top-color: white;
+  }
+
+  label {
+    width: 7em;
+  }
+
+  input {
+    height: 3em;
+    width: 25em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 0;
+  }
+
+  form {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .calculateButton {
+    height: 5em;
+    margin-bottom: 0.5em;
+    width: 8em;
+  }
+
+  .labels {
+    float: left;
+    margin-left: 20%;
+  }
+
+  .labels p {
+    margin: 0;
+    text-align: right;
+  }
+
+  .data {
+    margin-left: 40%;
+  }
+
+  .data p {
+    margin-left: 30%;
+  }
+
+  .calculateButton {
+    margin-left: 0;    
+  }
+
+  #numberOfYears {
+    margin-left: 0;
+    margin-right: 10%;
   }
 
   h1 {
     color: blue;
+    margin-left: 1em;
+    margin-right: 10%;
+  }
+
+  .error {
+    margin-left: 2em;
   }
 
 }
