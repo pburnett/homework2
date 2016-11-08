@@ -2,17 +2,12 @@
     Document   : secondView
     Created on : Oct 24, 2016, 7:13:31 PM
     Author     : Dylan Burnett & Ryan Kugel
+    Copyright  : copyright © 2016 Dylan Burnett & Ryan Kugel
 --%>
 <%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/includes/header.html" %>
 
-<%@ page import="edu.elon.data.Data" %>
-<%
-  Data data = (Data) request.getAttribute("data");
-  if (data == null) {
-    data = new Data();
-  }
-%>
 <div>
   <main>
     <h1>Future Value Calculator</h1>
@@ -23,10 +18,10 @@
       <p>Future Value: </p><br>
     </aside>
     <section class="data">
-      <p>$<%= data.getInvestmentAmount()%></p><br>
-      <p><%= data.getYearlyInvestmentRate()%></p><br>
-      <p><%= data.getNumberOfYears()%></p><br>
-      <p>$<%= data.getFutureValue()%></p><br>
+      <p><c:out value="${data.investmentAmount}" /></p><br>
+      <p><c:out value="${data.yearlyInvestmentRate}" /></p><br>
+      <p><c:out value="${data.numberOfYears}" /></p><br>
+      <p><c:out value="${data.futureValue}" /></p><br>
     </section>
   </main>
 </div>
